@@ -75,6 +75,9 @@ document.addEventListener('DOMContentLoaded', function () {
           cardNumberError.textContent = '';
       }
 
+       // Enable or disable the register button based on the validity of the form
+       registerButton.disabled = !isValid;
+
       return isValid;
   }
 
