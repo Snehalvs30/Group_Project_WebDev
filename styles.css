@@ -1,0 +1,309 @@
+/* login css */
+body {
+    background-color: #f7f7f7;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+  }
+
+  .login-container {
+    max-width: 400px;
+    margin-top: 100px;
+  }
+
+  .card {
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+
+  .form-control {
+    border-radius: 5px;
+  }
+
+  .modal-content {
+    border-radius: 10px;
+  }body {
+      background-color: #f7f7f7;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin-top: 100px;
+    }
+
+    .card {
+      padding: 20px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+    }
+
+    .form-control {
+      border-radius: 5px;
+    }
+
+    .modal-content {
+      border-radius: 10px;
+    }
+
+/* landing html */
+body {
+    background-color: #f7f7f7;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+  }
+
+  /* Navbar Styling */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #007bff !important;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    margin-right: 20px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #007bff !important;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+
+  .hero-section {
+    background: url('images/hero.png') no-repeat ; /* Make sure the image is centered */
+    background-size: cover; /* Use 'contain' to ensure the full image is visible without cropping */
+    height: 50vh; /* Adjust height */
+    margin: 0 10px; /* Add 10px margin on each side */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    
+  }
+  
+  .hero-section::before {
+    content: none;
+  }
+  
+  .hero-section .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.8rem; /* Decrease font size to fit in reduced height */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Subtle text shadow for contrast */
+    line-height: 1.2;
+  }
+  
+  .hero-section button {
+    background-color: #ff4500; /* Bright orange to stand out */
+    border: none;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    color: #ffffff;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow for better visibility */
+  }
+  
+  .hero-section button:hover {
+    background-color: #e03b00; /* Slightly darker on hover */
+    transform: translateY(-2px); /* Lift effect for button on hover */
+  }
+  
+  
+
+/* Category Section */
+.category-icon-container {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .category-icon-container i {
+    font-size: 2.5rem;
+    color: #5a5a5a;
+  }
+  
+  .category-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .category-link {
+    text-decoration: none;
+  }
+  
+  .category-link:hover .category-icon-container {
+    border-color: #007bff;
+    transform: scale(1.1);
+  }
+  
+  .category-link:hover .category-icon-container i {
+    color: #007bff;
+  }
+  
+  .category-link:hover .category-text {
+    color: #007bff;
+  }
+  
+
+  
+  
+
+  .event-cards {
+    padding: 60px 0;
+  }
+
+  .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+
+
+  /* Trending Events Section Styling */
+.trending-events-section {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .trending-card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .trending-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Trending Numbers on Cards */
+  .trending-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff; /* Bootstrap primary blue */
+    background: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50%;
+  }
+  
+  /* Carousel Controls */
+  .trending-carousel-control {
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    width: 36px;
+    height: 36px;
+  }
+  
+  .trending-carousel-control:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Standard Bootstrap carousel controls with custom styling */
+/* .carousel-control-prev, .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    border: 1px solid #ddd;
+  }
+  
+  .carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(240, 240, 240, 1);
+  } */
+
+  /* Carousel Controls Styling */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.8); /* Light background with some transparency */
+  border-radius: 50%;
+  border: 1px solid #ccc; /* Border to help it stand out */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 20px 20px; /* Adjust the size of the arrow icons */
+  background-color: transparent; /* Transparent background for the arrows */
+  filter: invert(0); /* Make arrows black for visibility */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #007bff; /* Bootstrap primary blue on hover */
+  border-color: #007bff; /* Matching blue border */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  filter: invert(1); /* Make arrows white for visibility when hovering */
+}
+  
+
+  /* .navbar {
+    background-color: white;
+    padding: 10px 20px;
+  } */
+
+ /* Footer Styling */
+.footer {
+    padding: 40px;
+    background-color: #f8f9fa;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
