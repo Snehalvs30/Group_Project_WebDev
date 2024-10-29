@@ -47,9 +47,12 @@
 3. Open `login.html` and `landing.html` in your preferred web browser to test the functionality.
 
 ## Team Members and Contributions
-- **[Your Name]**: Worked on the login page design, validation logic, and responsive layout.
-- **[Teammate 1]**: Developed the landing page structure and integrated the event categories and cards.
-- **[Teammate 2]**: Implemented registration form validation and the card display for event listings.
+- **[Snehal Shinde ]** Worked on Validation logic using JavaScript for the login and registration Page.
+- **[Kundana Pooskur ]**: Worked on the login page design, and responsive layout.
+- **[Abhinav Chinta]**:Developed the Header,Nav bar and footer for all the pages.
+- **[Ashwin Thankachan]**:Worked for on landing.html content, registration.HTML  and registration page validation
+- **[Pranit Mathyam]**: Implemented all the bootstrap Elements in Login and Landing Page.
+
 
 ## Form Validation Details
 Form validation is performed using JavaScript, ensuring that:
