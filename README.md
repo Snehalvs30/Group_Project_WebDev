@@ -38,7 +38,7 @@
 ## Project Setup
 1. Clone the repository from GitHub:
    ```bash
-   git clone https://github.com/<your-group-repository-url>.git
+   git clone https://github.com/Snehalvs30/Group_Project_WebDev.git
    ```
 2. Navigate to the project directory:
    ```bash
