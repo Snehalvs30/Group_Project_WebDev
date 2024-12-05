@@ -1,47 +1,79 @@
 .register-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: black;
-  }
-  
-  .register-form {
-    background-color: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-  }
-  
-  .register-form h2 {
-    text-align: center;
-    color: black;
-    margin-bottom: 20px;
-  }
-  
-  .register-form input,
-  .register-form select {
-    width: -webkit-fill-available;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .register-form button {
-    width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    margin-top: 5%;
-  }
-  
-  .register-form button:hover {
-    background-color: #33373b;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black; /* Updated for consistency with index.css */
+}
 
-  /* Popup Container */
+.register-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.register-form h2 {
+  text-align: center;
+  color: #333; /* Consistent with index.css headings */
+  margin-bottom: 20px;
+}
+
+.register-form input,
+.register-form select {
+  width: 100%; /* Adjusted to ensure full responsiveness */
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+  border-color: #007BFF; /* Highlight on focus */
+}
+
+.register-form input.error,
+.register-form select.error {
+  border-color: red; /* Red border for error fields */
+  background-color: #ffe6e6; /* Light red background for visibility */
+}
+
+.field-error {
+  color: red;
+  font-size: 12px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+  text-align: left; /* Align error messages with input fields */
+}
+
+.register-form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  margin-top: 5%;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.register-form button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Popup Container */
 .popup {
   position: fixed;
   top: 0;
@@ -81,4 +113,82 @@
 .popup-content button:hover {
   background-color: #0056b3;
 }
-  
+
+/* General styling (already provided) */
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .register-container {
+    padding: 20px;
+    height: auto; /* Adjust height for smaller screens */
+    align-items: flex-start; /* Align content at the top */
+  }
+
+  .register-form {
+    padding: 20px; /* Reduce padding */
+    border-radius: 6px; /* Slightly smaller border radius */
+    width: 100%; /* Ensure form spans full width */
+  }
+
+  .register-form h2 {
+    font-size: 20px; /* Reduce font size for headings */
+    margin-bottom: 15px;
+  }
+
+  .register-form input,
+  .register-form select {
+    padding: 10px; /* Reduce padding for input fields */
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .register-form button {
+    padding: 10px; /* Reduce button padding */
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .popup-content {
+    padding: 15px; /* Adjust padding for popups */
+    width: 90%; /* Ensure popups fit within screen width */
+    font-size: 14px; /* Reduce text size for popup content */
+  }
+
+  .popup-content button {
+    padding: 8px 16px; /* Smaller buttons in popup */
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-form {
+    padding: 15px; /* Further reduce padding */
+    border-radius: 5px; /* Smaller border radius */
+  }
+
+  .register-form h2 {
+    font-size: 18px; /* Further reduce heading font size */
+    margin-bottom: 10px;
+  }
+
+  .register-form input,
+  .register-form select {
+    padding: 8px; /* Smaller padding for inputs */
+    font-size: 12px; /* Smaller font size */
+  }
+
+  .register-form button {
+    padding: 8px; /* Smaller button size */
+    font-size: 14px;
+  }
+
+  .popup-content {
+    padding: 10px; /* Smaller padding for popups */
+    width: 95%; /* Ensure it fits even smaller screens */
+    font-size: 12px; /* Adjust text size for popup */
+  }
+
+  .popup-content button {
+    padding: 6px 12px; /* Smaller buttons in popup */
+    font-size: 12px;
+  }
+}
+

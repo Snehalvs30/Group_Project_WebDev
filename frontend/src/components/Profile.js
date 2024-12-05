@@ -31,7 +31,7 @@ const Profile = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/users/uploadProfileImage",
+        "http://localhost:8000/api/users/profile-image/uploadProfileImage",
         formData,
         {
           headers: {

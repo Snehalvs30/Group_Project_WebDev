@@ -36,7 +36,7 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-links">
-        <Link to="/">HOME</Link>
+        <Link to="/events">HOME</Link>
         {/* Conditional rendering based on user role */}
         {userRole === "coordinator" ? (
           <Link to="/creatorevents">OUR EVENTS</Link> // Updated link for coordinators

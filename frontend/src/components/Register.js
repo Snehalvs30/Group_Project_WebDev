@@ -14,6 +14,106 @@ const Register = () => {
   const [phoneNumber, setPhoneNumber] = useState(""); // For coordinators
   const [success, setSuccess] = useState(false); // To manage success popup
   const [error, setError] = useState("");
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    password: "",
+    phoneNumber: "",
+    department: "",
+    classInfo: "",
+    registerNumber: "",
+    clubName: "",
+  });
+
+  // Validation checks
+  const validateName = (value) => value.trim().length >= 3;
+  const validateEmail = (value) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  const validatePassword = (value) =>
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
+      value
+    ); // At least 8 characters, one uppercase, one lowercase, one number, one special character
+  const validatePhoneNumber = (value) =>
+    /^[0-9]{10}$/.test(value); // Must be 10 digits
+  const validateField = (field, value) => {
+    switch (field) {
+      case "name":
+        return validateName(value) ? "" : "Name must be at least 3 characters.";
+      case "email":
+        return validateEmail(value) ? "" : "Invalid email format.";
+      case "password":
+        return validatePassword(value)
+          ? ""
+          : "Password must be at least 8 characters, with uppercase, lowercase, number, and special character.";
+      case "phoneNumber":
+        return validatePhoneNumber(value)
+          ? ""
+          : "Phone number must be exactly 10 digits.";
+      case "department":
+        return value.trim() ? "" : "Department is required.";
+      case "classInfo":
+        return role === "student" && !value.trim()
+          ? "Class information is required."
+          : "";
+      case "registerNumber":
+        return role === "student" && !value.trim()
+          ? "Register number is required."
+          : "";
+      case "clubName":
+        return role === "coordinator" && !value.trim()
+          ? "Club name is required."
+          : "";
+      default:
+        return "";
+    }
+  };
+
+  const handleChange = (field, value) => {
+    const validationMessage = validateField(field, value);
+    setErrors({ ...errors, [field]: validationMessage });
+
+    switch (field) {
+      case "name":
+        setName(value);
+        break;
+      case "email":
+        setEmail(value);
+        break;
+      case "password":
+        setPassword(value);
+        break;
+      case "phoneNumber":
+        setPhoneNumber(value);
+        break;
+      case "department":
+        setDepartment(value);
+        break;
+      case "classInfo":
+        setClassInfo(value);
+        break;
+      case "registerNumber":
+        setRegisterNumber(value);
+        break;
+      case "clubName":
+        setClubName(value);
+        break;
+      default:
+        break;
+    }
+  };
+
+  const isFormValid = () =>
+    !Object.values(errors).some((error) => error) &&
+    name &&
+    email &&
+    password &&
+    phoneNumber &&
+    department &&
+    (role === "student"
+      ? classInfo && registerNumber
+      : role === "coordinator"
+      ? clubName
+      : true);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,22 +134,22 @@ const Register = () => {
         data.clubName = clubName;
       }
 
-      console.log("Submitting data:", data); // Debug log
+      console.log("Submitting data:", data);
       const response = await axios.post(
         "http://localhost:8000/api/users/register",
         data
       );
       console.log("Response from server:", response.data);
-      setSuccess(true); // Show success popup
-      setError(""); // Clear any previous error
+      setSuccess(true);
+      setError("");
       setTimeout(() => {
         setSuccess(false);
-        window.location.href = "/login"; // Redirect to login page
+        window.location.href = "/login";
       }, 3000);
     } catch (err) {
       setSuccess(false);
       setError(
-        err.response.data.error || "Something went wrong. Please try again."
+        err.response?.data?.error || "Something went wrong. Please try again."
       );
       setTimeout(() => {
         setError("");
@@ -58,12 +158,12 @@ const Register = () => {
   };
 
   const closeSuccessPopup = () => {
-    setSuccess(false); // Hide success popup
-    window.location.href = "/login"; // Redirect to login page
+    setSuccess(false);
+    window.location.href = "/login";
   };
 
   const closeErrorPopup = () => {
-    setError(""); // Hide error popup
+    setError("");
   };
 
   const navigateToLogin = () => {
@@ -79,29 +179,36 @@ const Register = () => {
           type="text"
           placeholder="Name"
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => handleChange("name", e.target.value)}
           required
         />
+        {errors.name && <p className="field-error">{errors.name}</p>}
         <input
           type="email"
           placeholder="Email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => handleChange("email", e.target.value)}
           required
         />
+        {errors.email && <p className="field-error">{errors.email}</p>}
         <input
           type="text"
           placeholder="Phone Number"
           value={phoneNumber}
-          onChange={(e) => setPhoneNumber(e.target.value)}
+          onChange={(e) => handleChange("phoneNumber", e.target.value)}
+          required
         />
+        {errors.phoneNumber && (
+          <p className="field-error">{errors.phoneNumber}</p>
+        )}
         <input
           type="password"
           placeholder="Password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => handleChange("password", e.target.value)}
           required
         />
+        {errors.password && <p className="field-error">{errors.password}</p>}
         <select value={role} onChange={(e) => setRole(e.target.value)}>
           <option value="student">Student</option>
           <option value="coordinator">Coordinator</option>
@@ -110,23 +217,32 @@ const Register = () => {
           type="text"
           placeholder="Department"
           value={department}
-          onChange={(e) => setDepartment(e.target.value)}
+          onChange={(e) => handleChange("department", e.target.value)}
           required
         />
+        {errors.department && (
+          <p className="field-error">{errors.department}</p>
+        )}
         {role === "student" && (
           <>
             <input
               type="text"
               placeholder="Class"
               value={classInfo}
-              onChange={(e) => setClassInfo(e.target.value)}
+              onChange={(e) => handleChange("classInfo", e.target.value)}
             />
+            {errors.classInfo && (
+              <p className="field-error">{errors.classInfo}</p>
+            )}
             <input
               type="text"
               placeholder="Register Number"
               value={registerNumber}
-              onChange={(e) => setRegisterNumber(e.target.value)}
+              onChange={(e) => handleChange("registerNumber", e.target.value)}
             />
+            {errors.registerNumber && (
+              <p className="field-error">{errors.registerNumber}</p>
+            )}
           </>
         )}
         {role === "coordinator" && (
@@ -135,12 +251,16 @@ const Register = () => {
               type="text"
               placeholder="Club Name"
               value={clubName}
-              onChange={(e) => setClubName(e.target.value)}
+              onChange={(e) => handleChange("clubName", e.target.value)}
             />
+            {errors.clubName && (
+              <p className="field-error">{errors.clubName}</p>
+            )}
           </>
         )}
-        <button type="submit">Register</button>
-        {/* Add the Login button */}
+        <button type="submit" disabled={!isFormValid()}>
+          Register
+        </button>
         <button
           type="button"
           className="login-button"
