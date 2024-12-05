@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./LandingPage.css"; // Import the CSS file for styling
-import bgiamge from "./assets/aboutusbg.jpg";
+//import bgiamge from "./assets/aboutusbg.jpg";
 import logo from "./assets/logo.png";
 
 const LandingPage = () => {
@@ -18,7 +18,7 @@ const LandingPage = () => {
       {/* Top Navbar */}
       <nav className="navbar">
         <div className="navbar-logo">
-          <img src={logo} alt="EduVents Logo" />
+          <img src={logo} alt="CrowdHive Logo" />
         </div>
         <div className="navbarbuttons">
           <a href="/login">

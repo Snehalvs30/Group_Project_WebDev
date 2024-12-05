@@ -5,6 +5,11 @@ const PrivateRoute = ({ children, role }) => {
   const token = localStorage.getItem("token");
   const userRole = localStorage.getItem("role");
 
+  console.log("Token:", token);
+  console.log("User Role:", userRole);
+  console.log("Required Role:", role);
+
+
   // Redirect unauthenticated users to Landing Page
   if (!token) {
     return <Navigate to="/" replace />;
