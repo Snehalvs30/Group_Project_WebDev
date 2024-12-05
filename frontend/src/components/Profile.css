@@ -83,3 +83,126 @@
 .upload-section input {
   margin-right: 10px;
 }
+
+
+/* General Tablet and Mobile View */
+@media (max-width: 768px) {
+  .profile-container {
+    max-width: 90%; /* Adjust width for smaller screens */
+    margin: 20px auto; /* Reduce margin */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .profile-info {
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 8px; /* Reduce spacing between elements */
+  }
+
+  .profile-info h2 {
+    font-size: 1.8rem; /* Adjust font size */
+    margin-bottom: 15px;
+  }
+
+  .profile-info p {
+    font-size: 14px; /* Reduce font size for smaller screens */
+    text-align: center; /* Center-align text for better readability */
+  }
+
+  .profile-image-container {
+    width: 120px; /* Reduce profile image size */
+    height: 120px;
+  }
+
+  .edit-icon {
+    bottom: 5px; /* Adjust position of the edit icon */
+    right: 5px;
+    padding: 4px;
+  }
+
+  .edit-icon img {
+    width: 20px;
+    height: 20px; /* Smaller edit icon for compact screens */
+  }
+
+  .upload-section {
+    text-align: center; /* Center-align upload section */
+    margin-top: 10px;
+  }
+
+  .upload-section input {
+    font-size: 14px; /* Adjust input font size */
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 576px) {
+  .profile-container {
+    max-width: 95%; /* Use almost full width of the screen */
+    margin: 15px auto;
+    padding: 10px;
+  }
+
+  .profile-info {
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 5px;
+  }
+
+  .profile-info h2 {
+    font-size: 1.5rem; /* Further reduce font size */
+  }
+
+  .profile-info p {
+    font-size: 13px; /* Smaller font size for compact screens */
+  }
+
+  .profile-image-container {
+    width: 100px; /* Further reduce profile image size */
+    height: 100px;
+  }
+
+  .edit-icon img {
+    width: 18px;
+    height: 18px; /* Adjust icon size */
+  }
+
+  .upload-section input {
+    font-size: 12px; /* Reduce font size for smaller screens */
+  }
+}
+
+/* Very Small Screens (Phones < 400px) */
+@media (max-width: 400px) {
+  .profile-container {
+    padding: 8px;
+    margin: 10px auto;
+  }
+
+  .profile-info {
+    margin-left: 0; /* Remove margins */
+    margin-right: 0;
+  }
+
+  .profile-info h2 {
+    font-size: 1.2rem; /* Smallest heading size */
+  }
+
+  .profile-info p {
+    font-size: 12px; /* Smallest font size */
+  }
+
+  .profile-image-container {
+    width: 80px; /* Smallest profile image size */
+    height: 80px;
+  }
+
+  .edit-icon img {
+    width: 16px;
+    height: 16px; /* Adjust icon size for very small screens */
+  }
+
+  .upload-section input {
+    font-size: 11px;
+  }
+}
