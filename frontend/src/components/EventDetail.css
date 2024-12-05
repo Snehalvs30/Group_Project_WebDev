@@ -104,3 +104,106 @@
 .registered-button:hover {
   background-color: #ade8c5;
 }
+
+/* General Tablet and Mobile View */
+@media (max-width: 768px) {
+  .event-detail-container {
+    max-width: 90%; /* Make container take up most of the screen width */
+    padding: 15px; /* Reduce padding */
+    margin: 5vh auto; /* Adjust vertical alignment for smaller screens */
+  }
+
+  .event-detail-image {
+    max-height: 300px; /* Reduce image height for smaller screens */
+    border-radius: 5px; /* Slightly smaller border radius */
+  }
+
+  .register-button,
+  .submit-register-button,
+  .close-modal-button {
+    width: 100%; /* Make buttons full width */
+    padding: 12px; /* Increase padding for better touch targets */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .register-input-container {
+    margin-bottom: 15px; /* Reduce spacing between inputs */
+  }
+
+  .registerfield {
+    width: 100%; /* Input fields take up full width */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .modal-content {
+    width: 90%; /* Modal content takes up more screen space */
+    padding: 20px; /* Reduce padding */
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 576px) {
+  .event-detail-container {
+    max-width: 95%; /* Reduce max width further for very small screens */
+    margin: 2vh auto; /* Adjust vertical alignment */
+  }
+
+  .event-detail-image {
+    max-height: 200px; /* Further reduce image height */
+  }
+
+  .register-button,
+  .submit-register-button,
+  .close-modal-button {
+    padding: 10px; /* Reduce padding */
+    font-size: 12px; /* Smaller font size */
+  }
+
+  .modal-content {
+    padding: 15px; /* Further reduce padding for the modal */
+  }
+
+  .registerfield {
+    font-size: 14px; /* Adjust input font size */
+  }
+}
+
+/* For Landscape View on Tablets and Phones */
+@media (max-height: 500px) and (max-width: 768px) {
+  .event-detail-container {
+    margin: 2vh auto; /* Reduce vertical margin */
+  }
+
+  .modal-content {
+    width: 80%; /* Make modal slightly narrower */
+  }
+}
+
+/* Very Small Devices (Phones < 400px) */
+@media (max-width: 400px) {
+  .event-detail-container {
+    padding: 10px;
+    max-width: 95%;
+  }
+
+  .event-detail-image {
+    max-height: 150px; /* Keep the image smaller */
+  }
+
+  .register-button,
+  .submit-register-button,
+  .close-modal-button {
+    padding: 8px;
+    font-size: 10px; /* Smaller font for very compact screens */
+  }
+
+  .modal-content {
+    padding: 10px; /* Minimal padding */
+    width: 100%; /* Utilize full screen width */
+  }
+
+  .registerfield {
+    padding: 8px;
+    font-size: 12px;
+  }
+}

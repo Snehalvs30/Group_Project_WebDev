@@ -178,3 +178,166 @@ button {
 .topnone{
 margin-top: 0px;
 }
+
+
+/* General Tablet and Mobile View */
+@media (max-width: 768px) {
+  .creator-events-container {
+    margin: 5%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .event-list-container {
+    padding: 20px 10px;
+  }
+
+  .event-list-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .event-card {
+    flex-direction: column; /* Stack the content vertically */
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .event-image-container {
+    width: 100%; /* Make image container full width */
+    height: 150px; /* Adjust height for smaller screens */
+  }
+
+  .event-content {
+    flex-grow: unset; /* Allow flexibility */
+    text-align: center; /* Center text for smaller screens */
+  }
+
+  .event-content p {
+    margin: 10px 0;
+  }
+
+  .event-card button {
+    width: 100%;
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 576px) {
+  .creator-events-container {
+    margin: 3%;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .event-list-container {
+    padding: 15px 5px;
+  }
+
+  .event-card {
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .event-image-container {
+    height: 120px; /* Smaller image height for mobile */
+  }
+
+  .event-content p {
+    font-size: 0.9rem; /* Reduce font size */
+  }
+
+  button {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+/* Modal Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+  .modal2-overlay {
+    padding: 20px;
+    align-items: flex-start; /* Align modal at the top for better usability */
+  }
+
+  .modal2-content {
+    padding: 20px;
+    width: 100%; /* Full width modal */
+    height: auto;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 5px;
+  }
+
+  th {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Very Small Screens (Phones < 400px) */
+@media (max-width: 400px) {
+  .creator-events-container {
+    margin: 2%;
+    padding: 5px;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .event-list-container {
+    padding: 10px 5px;
+  }
+
+  .event-card {
+    padding: 8px;
+  }
+
+  .event-image-container {
+    height: 100px; /* Further reduce height */
+  }
+
+  .event-content p {
+    font-size: 0.8rem; /* Smaller text for smaller screens */
+  }
+
+  .modal2-content {
+    padding: 15px;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  th, td {
+    padding: 4px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px;
+  }
+}

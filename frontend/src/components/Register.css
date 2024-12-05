@@ -192,3 +192,149 @@
   }
 }
 
+/* Tablet View */
+@media (max-width: 768px) {
+  .register-container {
+    padding: 10px; /* Ensure padding on smaller screens */
+    height: auto; /* Allow the height to adjust dynamically */
+    align-items: flex-start; /* Align content towards the top */
+  }
+
+  .register-form {
+    padding: 20px; /* Reduce padding for better fit */
+    max-width: 90%; /* Ensure form adjusts to smaller widths */
+    border-radius: 8px;
+  }
+
+  .register-form h2 {
+    font-size: 20px; /* Adjust font size for headings */
+    margin-bottom: 15px; /* Reduce margin below heading */
+  }
+
+  .register-form input,
+  .register-form select {
+    padding: 10px; /* Reduce padding */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .register-form button {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .popup-content {
+    padding: 20px; /* Adjust popup padding */
+    width: 90%; /* Make popups fit smaller screens */
+    font-size: 14px;
+  }
+
+  .popup-content button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 576px) {
+  .register-container {
+    padding: 10px;
+    height: auto;
+  }
+
+  .register-form {
+    padding: 15px; /* Reduce padding further */
+    max-width: 100%; /* Full width for compact screens */
+  }
+
+  .register-form h2 {
+    font-size: 18px;
+    margin-bottom: 10px; /* Reduce spacing */
+  }
+
+  .register-form input,
+  .register-form select {
+    padding: 8px;
+    font-size: 12px; /* Smaller font size for compact screens */
+  }
+
+  .register-form button {
+    font-size: 14px;
+    padding: 8px; /* Adjust button padding */
+  }
+
+  .popup-content {
+    padding: 15px; /* Adjust popup padding */
+    width: 95%; /* Fit to screen width */
+    font-size: 12px;
+  }
+
+  .popup-content button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Very Small Screens (Phones < 400px) */
+@media (max-width: 400px) {
+  .register-form {
+    padding: 10px; /* Minimal padding for very small screens */
+    border-radius: 5px;
+  }
+
+  .register-form h2 {
+    font-size: 16px; /* Smallest heading size */
+    margin-bottom: 8px; /* Further reduce margin */
+  }
+
+  .register-form input,
+  .register-form select {
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .register-form button {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .popup-content {
+    padding: 10px; /* Smallest padding for popup */
+    width: 100%; /* Use full width */
+    font-size: 11px;
+  }
+
+  .popup-content button {
+    padding: 6px 10px; /* Smallest button size */
+    font-size: 11px;
+  }
+}
+
+/* Landscape View on Tablets and Phones */
+@media (max-height: 500px) and (max-width: 768px) {
+  .register-container {
+    height: auto; /* Allow content to adjust height */
+    padding: 15px; /* Add padding for landscape */
+  }
+
+  .register-form {
+    max-width: 90%; /* Adjust width for landscape */
+    padding: 15px;
+  }
+
+  .register-form h2 {
+    font-size: 18px; /* Adjust font size for landscape */
+  }
+
+  .register-form input,
+  .register-form select {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .register-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+
