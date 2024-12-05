@@ -1,4 +1,3 @@
-/* Base Styles (already included in your code) */
 .profile-container {
   max-width: 600px;
   margin: 40px auto;
@@ -7,7 +6,9 @@
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
-
+.bg{
+  background-color: black;
+}
 .profile-info {
   display: flex;
   flex-direction: column;
@@ -32,6 +33,17 @@
 .profile-info strong {
   font-weight: bold;
   color: #333;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-info {
+  text-align: center;
 }
 
 .profile-image-container {
@@ -70,78 +82,4 @@
 
 .upload-section input {
   margin-right: 10px;
-}
-
-/* Media Queries for Responsiveness */
-
-/* For screens up to 768px (tablets and smaller devices) */
-@media (max-width: 768px) {
-  .profile-container {
-      width: 90%;
-      padding: 15px;
-      margin: 20px auto;
-  }
-
-  .profile-info {
-      margin-left: 10%;
-      margin-right: 10%;
-  }
-
-  .profile-info h2 {
-      font-size: 22px;
-  }
-
-  .profile-info p {
-      font-size: 14px;
-  }
-
-  .profile-image-container {
-      width: 120px;
-      height: 120px;
-  }
-
-  .edit-icon img {
-      width: 20px;
-      height: 20px;
-  }
-}
-
-/* For screens up to 480px (mobile devices) */
-@media (max-width: 480px) {
-  .profile-container {
-      width: 100%;
-      padding: 10px;
-  }
-
-  .profile-info {
-      margin-left: 5%;
-      margin-right: 5%;
-  }
-
-  .profile-info h2 {
-      font-size: 18px;
-  }
-
-  .profile-info p {
-      font-size: 12px;
-  }
-
-  .profile-image-container {
-      width: 100px;
-      height: 100px;
-  }
-
-  .edit-icon img {
-      width: 16px;
-      height: 16px;
-  }
-
-  .upload-section input {
-      width: 100%;
-      margin: 10px 0;
-  }
-
-  .upload-section button {
-      width: 100%;
-  }
 }
