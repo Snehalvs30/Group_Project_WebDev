@@ -2,7 +2,7 @@
 
 **Streamlining Event Management for College Campuses**
 
-**EduVents** is a modern web application built using the MERN stack to simplify and enhance the process of organizing, managing, and participating in college events. This platform empowers students and administrators to seamlessly coordinate events, track registrations, and foster engagement across the campus.
+**CrowdHive** is a modern web application built using the MERN stack to simplify and enhance the process of organizing, managing, and participating in college events. This platform empowers students and administrators to seamlessly coordinate events, track registrations, and foster engagement across the campus.
 
 ---
 
@@ -28,11 +28,11 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Harshjangid015/EduVents---College-Event-Management-Website-MERN.git
+   git clone  https://github.com/Snehalvs30/Group_Project_WebDev.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd EduVents
+   cd BeeHive
    ```
 3. Install dependencies for both frontend and backend:
    ```bash
